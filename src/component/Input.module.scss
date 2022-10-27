@@ -1,0 +1,106 @@
+@import "../util/style.scss";
+
+.wrapper {
+  width: calc(100% - 24px);
+  padding: 0 12px 8px 12px;
+  &.active {
+    padding: 0 12px 4px 12px;
+  }
+  &.disabled {
+    padding: 4px 12px 12px 12px;
+  }
+}
+
+.frame {
+  &-title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 4px 0 4px 0;
+    gap: 0.25rem;
+    overflow: hidden;
+  }
+  &-value {
+    min-width: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 4px 0px 4px 0px;
+    background-color: $col-verylight;
+    gap: 0.25rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    &.clickable:hover {
+      background-color: $col-light;
+    }
+    transition: all 0.3s;
+  }
+}
+
+.operator {
+  font-family: "Noto Sans";
+  width: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  color: $col-grey;
+  text-align: center;
+  font-weight: $font-sr;
+}
+
+.title {
+  line-height: 1.25rem;
+  flex: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.value {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: $font-r;
+  font-size: 1.5rem;
+  padding-left: 2px;
+  &.active {
+    font-size: 2.25rem;
+    color: $col-semilight;
+  }
+  &.disabled {
+    color: $col-grey;
+  }
+  &.new {
+    color: $col-k;
+  }
+  &.emph {
+    color: $col-1;
+  }
+  transition: all 0.3s;
+}
+
+.unit {
+  font-family: "Noto Sans";
+  line-height: 1.25rem;
+  min-width: 58px;
+  white-space: nowrap;
+  transition: all 0.2s ease-out;
+  padding-right: 2px;
+  &.rate {
+    min-width: 38px;
+  }
+  &.disabled {
+    color: $col-grey;
+  }
+  &.emph {
+    color: $col-1;
+  }
+}
+
+.illust {
+  padding-top: 4px;
+  padding-left: 22px;
+  font-size: 12px;
+  line-height: 12px;
+  font-family: "Noto Sans";
+  color: $col-grey;
+}

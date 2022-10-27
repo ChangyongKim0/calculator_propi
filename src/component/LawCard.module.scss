@@ -1,0 +1,148 @@
+@import "../util/style.scss";
+
+.wrapper {
+  position: relative;
+  @include row(auto, auto, 0);
+  justify-content: flex-start;
+  border-radius: 5px;
+  margin-left: 1.5rem;
+  &.first {
+    margin-left: 0;
+  }
+}
+
+.style {
+  &-default {
+    * {
+      @include txt-regular();
+      @include txt-14();
+      color: $col-txt-g3;
+    }
+  }
+  &-total {
+    * {
+      @include txt-regular();
+      @include txt-14();
+      color: $col-txt-w;
+    }
+  }
+  &-detail {
+    * {
+      @include txt-light();
+      @include txt-11();
+      color: $col-txt-g5;
+    }
+  }
+}
+
+.frame {
+  &-guidebar {
+    position: absolute;
+    top: 2rem;
+    left: 0.3rem;
+    width: 0.2rem;
+    margin-left: 0.6rem;
+    background-color: $col-g95;
+    border-radius: 1rem;
+    transform: translate(0, -0rem);
+  }
+  &-icon {
+    font-size: 1.125rem;
+    font-weight: $font-e;
+  }
+  &-content {
+    @include column(auto, auto, 0.2rem);
+    align-items: flex-start;
+  }
+  &-row {
+    height: 1.125rem;
+    overflow: visible;
+  }
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: $font-b;
+  text-align: left;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+.sub-title {
+  font-size: 1rem;
+  color: $col-g5;
+  font-weight: $font-r;
+  text-align: left;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+.text {
+  &-default {
+    @include txt-bold();
+  }
+  &-total {
+    @include txt-bold();
+    @include txt-21();
+  }
+  &-detail {
+    @include txt-bold();
+  }
+}
+
+.unit {
+  &-default {
+    @include txt-bold();
+  }
+  &-total {
+    @include txt-bold();
+  }
+  &-detail {
+    @include txt-bold();
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    @include row(auto, auto, 0rem);
+    justify-content: flex-start;
+    border-radius: 5px;
+  }
+  .frame {
+    &-guidebar {
+      background-color: $col-g95;
+      border-radius: 1rem;
+      margin-left: 0rem;
+      &:last-child {
+        background-color: $col-g6;
+      }
+    }
+    &-guidebar-list {
+      position: absolute;
+      @include row(0.2rem, auto, 0.2rem);
+      left: 0.5rem;
+      z-index: 100;
+    }
+    &-icon {
+      font-size: 1.125rem;
+      font-weight: bold;
+    }
+    &-dots {
+      width: 0.2rem;
+      height: 0.2rem;
+      border-radius: 0.1rem;
+      background-color: $col-g8;
+      &:last-child {
+        background-color: $col-g5;
+      }
+    }
+    &-content {
+      @include column(auto, auto, 0.5rem);
+      align-items: flex-start;
+    }
+    &-row {
+      height: 1.125rem;
+      overflow: visible;
+    }
+  }
+}

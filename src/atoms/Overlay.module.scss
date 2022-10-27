@@ -1,0 +1,109 @@
+@import "../util/style.scss";
+
+.wrapper {
+  // position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: var(--new100vh);
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 2;
+  justify-content: center;
+  // @include column(auto, auto, 1rem);
+  transition: background-color 0.1s;
+  pointer-events: none;
+  overflow: hidden;
+  &.backdrop {
+    background-color: rgba(0, 0, 0, 0.15);
+    pointer-events: inherit;
+  }
+  &.in-container {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  &.type {
+    &-center {
+      @include column(none, none, 1rem);
+      // position: fixed;
+    }
+    // &-stack {
+    //   @include column(none, none, 0rem);
+    //   justify-content: end;
+    // }
+  }
+  &.faint {
+    background-color: rgba(240, 240, 240, 0.8);
+  }
+}
+
+.frame {
+  pointer-events: none;
+  padding: 1rem;
+  & > * {
+    pointer-events: all;
+  }
+  width: calc(100% - 2rem);
+  &.full {
+    padding: 0rem;
+    min-height: 100%;
+    max-height: 100%;
+    width: 100%;
+  }
+  overflow: hidden;
+  &.type {
+    &-stack {
+      position: absolute;
+      top: 0rem;
+      @include column(none, none, 1rem);
+      &.on {
+        animation: slideup 0.5s;
+      }
+      &.off {
+        animation: slidedown 0.5s;
+      }
+    }
+    &-center {
+      justify-content: center;
+      @include row(none, none, 1rem);
+    }
+    &-left {
+      // justify-content: center;
+      align-items: flex-start;
+      position: absolute;
+      left: 0;
+      @include row(none, none, 0);
+    }
+    &-default {
+      min-width: 0;
+    }
+  }
+}
+
+@keyframes slideup {
+  from {
+    top: -4rem;
+  }
+  to {
+    top: 0rem;
+  }
+  to {
+    top: 0rem;
+  }
+}
+
+@keyframes slidedown {
+  from {
+    top: 0rem;
+  }
+  to {
+    top: -4rem;
+  }
+  to {
+    top: -4rem;
+  }
+}
+
+@media (max-width: 600px) {
+}

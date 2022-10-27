@@ -1,0 +1,31 @@
+@import "../util/style.scss";
+
+.wrapper {
+  padding: 1rem;
+
+  width: 100%;
+  max-width: 40rem;
+  pointer-events: auto;
+}
+
+.frame {
+  @include row(auto, auto, 1rem);
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: $col-dark;
+  cursor: pointer;
+  overflow: hidden;
+  width: calc(100% - 2rem);
+}
+
+.text {
+  color: $col-light;
+  word-break: keep-all;
+}
+
+.action {
+  font-weight: $font-b;
+  color: $col-w;
+  white-space: nowrap;
+}

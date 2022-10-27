@@ -1,0 +1,60 @@
+@import "../util/style.scss";
+
+.disable {
+  pointer-events: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.type {
+  &-row {
+    @include row(none, none, none);
+  }
+  &-column {
+    @include column(none, none, none);
+  }
+}
+
+.align {
+  &-left {
+    align-items: flex-start;
+  }
+  &-center {
+    align-items: center;
+  }
+  &-right {
+    align-items: flex-end;
+  }
+}
+
+.attach {
+  &-start {
+    justify-content: flex-start;
+  }
+  &-center {
+    justify-content: center;
+  }
+  &-end {
+    justify-content: flex-end;
+  }
+  &-space {
+    justify-content: space-between;
+  }
+}
+
+.multiple-line {
+  flex-wrap: wrap;
+}
+
+// @media (max-width: 600px) {
+//     .type {
+//         &-row {
+//             // @include row(auto, auto, none);
+//         }
+//         &-column {
+//             gap: 1rem !important;
+//         }
+//     }
+// }

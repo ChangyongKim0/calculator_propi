@@ -1,0 +1,64 @@
+@import "../util/style.scss";
+
+.wrapper {
+  position: absolute;
+  bottom: 0rem;
+  z-index: 1;
+  width: calc(100vw - 2rem);
+  padding: 1rem;
+}
+
+.frame {
+  &-bar {
+    width: 100%;
+    height: 3rem;
+    @include row(auto, auto, 0rem);
+    justify-content: space-around;
+    background-color: $col-w;
+    box-shadow: $shd-1;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    flex-wrap: wrap;
+    &.color {
+      &-white {
+        background-color: $col-w;
+      }
+    }
+  }
+  &-button {
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: $col-g2;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 3.2rem;
+    height: 2.6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    &.on {
+      // box-shadow: 0 0 0.5rem $col-g7;
+      background-color: $col-1;
+      // font-weight: bold;
+      color: $col-w;
+      pointer-events: none;
+      &.unselectable {
+        pointer-events: all;
+        cursor: pointer;
+      }
+      &:hover {
+        background: $col-1;
+      }
+    }
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}

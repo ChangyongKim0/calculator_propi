@@ -1,0 +1,24 @@
+@import "../util/style.scss";
+
+// .wrapper {
+// }
+
+.frame {
+  &-table {
+    @include column(auto, auto, 10px);
+  }
+}
+
+.table {
+  &-title {
+    font-size: 0.8125rem;
+    @include row(100px, auto, 10px);
+  }
+  &-content {
+    @include column(auto, auto, 10px);
+  }
+  &-cell {
+    font-size: 0.8125rem;
+    @include row(100px, auto, 10px);
+  }
+}

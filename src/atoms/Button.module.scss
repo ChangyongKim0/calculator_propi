@@ -1,0 +1,91 @@
+@import "../util/style.scss";
+
+.wrapper {
+  width: calc(100% - 1.5rem);
+  position: relative;
+  @include row(auto, auto, 0.25rem);
+  justify-content: center;
+  padding: 1.25rem 0.75rem 1.25rem 0.75rem;
+  overflow: visible;
+  cursor: pointer;
+  font-weight: $font-b;
+  border-radius: 1rem;
+  transition: all 0.3s;
+  color: $col-dark;
+  // box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05);
+  // &:hover {
+  //   box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.1);
+  // }
+}
+
+.color {
+  &-default {
+    background-color: $col-w;
+    color: $col-dark;
+  }
+  &-transparent {
+    color: $col-grey;
+    box-shadow: none;
+    font-weight: $font-sr;
+    &:hover {
+      background-color: $col-verylight;
+      box-shadow: none;
+      // @include shd-2;
+    }
+  }
+  &-primary {
+    background-color: $col-1;
+    color: $col-w;
+    // border: 1px solid $col-g9;
+    // @include shd-1;
+    &:hover {
+      background-color: $col-1-hover;
+      // @include shd-2;
+    }
+  }
+  &-excel {
+    background-color: #169937;
+    color: $col-w;
+    font-weight: $font-b;
+    &:hover {
+      opacity: 0.9;
+      // @include shd-2;
+    }
+  }
+  &-cad {
+    background-color: #c5383f;
+    color: $col-w;
+    font-weight: $font-b;
+    &:hover {
+      opacity: 0.9;
+      // @include shd-2;
+    }
+  }
+}
+
+.clickable {
+  &.transparent {
+    cursor: pointer;
+    &:hover {
+      background-color: $col-g95;
+      // @include shd-1;
+    }
+  }
+  &.solid {
+    cursor: pointer;
+    &:hover {
+      background-color: $col-g95;
+      // @include shd-2;
+    }
+  }
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+.icon {
+  fill: $col-w;
+  height: 1.1rem;
+}

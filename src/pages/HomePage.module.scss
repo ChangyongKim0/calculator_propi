@@ -1,0 +1,67 @@
+@import "../util/style.scss";
+
+.wrapper {
+  width: 100vw;
+  // max-width: 640px;
+  overflow-x: hidden;
+  background-color: $col-verylight;
+}
+
+.frame {
+  &-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: $col-w;
+    border-bottom: 1px solid $col-light;
+  }
+  &-title {
+    padding: 1rem 1rem 0 1rem;
+  }
+  &-nav {
+    padding-left: 0.5rem;
+    width: calc(100% - 0.5rem);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.text {
+  &-title {
+    font-weight: $font-r;
+  }
+  &-name {
+    font-weight: $font-r;
+    color: $col-txt-grey;
+  }
+  &-value {
+    font-weight: $font-r;
+    font-family: "Noto Sans";
+    font-size: 2.5rem;
+    line-height: 2rem;
+    color: $col-1;
+  }
+  &-unit {
+    font-weight: $font-r;
+    color: $col-1;
+  }
+  &-illust {
+    width: 100%;
+    padding-top: 4px;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    text-align: right;
+    font-family: "Noto Sans";
+    color: $col-lightgrey;
+    word-break: keep-all;
+  }
+  @include txt-head;
+  font-size: 32px;
+  margin-top: 60px;
+  color: $col-bgd-g5;
+}

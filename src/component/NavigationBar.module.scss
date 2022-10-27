@@ -1,0 +1,26 @@
+@import "../util/style.scss";
+
+.wrapper {
+  height: var(--new100vh);
+  width: 100%;
+  @include column(none, none, 30px);
+  position: relative;
+  background-color: $col-w;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.frame {
+  &-box {
+    z-index: 1;
+  }
+  &-nav {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 70vw;
+    height: --100vh;
+    background-color: $col-w;
+    box-shadow: $shd-1;
+  }
+}

@@ -1,0 +1,240 @@
+@import "../util/style.scss";
+
+.wrapper {
+  &.focused {
+    background-color: none;
+  }
+}
+.frame-field {
+  pointer-events: all;
+  position: relative;
+  @include row(auto, auto, 0px);
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid $col-1;
+  border-radius: 0.5rem;
+  background-color: $col-w;
+  box-sizing: border-box;
+
+  &.dropdown {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.text-field {
+  width: 100%;
+  // -ms-user-select: none;
+  // -moz-user-select: -moz-none;
+  // // -khtml-user-select: none;
+  // -webkit-user-select: none;
+  // user-select: none;
+  font-size: 1rem;
+  font-family: $font-primary;
+  font-weight: $font-b;
+  &::placeholder {
+    color: $col-txt-g5;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.icon {
+  fill: $col-bgd-g3;
+  cursor: pointer;
+}
+
+.drop-down {
+  @include column(auto, auto, 0px);
+  overflow: auto;
+  max-height: 50vh;
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    &-thumb {
+      height: 7%;
+      background-color: $col-bgd-g8;
+      border-radius: 10px;
+    }
+    &-track {
+      background-color: $col-bgd-w;
+    }
+  }
+}
+
+.frame {
+  &-button {
+    @include row(none, auto, 0px);
+    height: 1rem;
+    justify-content: space-between;
+    padding: 1rem 0.6rem;
+    &.full {
+      width: 100%;
+      padding: 1rem 0rem 1rem 0.6rem;
+    }
+  }
+  &-drop-down {
+    position: absolute;
+    z-index: 2;
+    left: -1.5px;
+    top: 3rem;
+    width: 100%;
+    background-color: $col-bgd-w;
+    max-height: 50vh;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border: 1.5px solid $col-g8;
+    box-shadow: 0 0 0.5rem $col-g8;
+    overflow: hidden;
+  }
+  &-list {
+    @include column(100%, none, 0.3rem);
+    width: calc(100% - 1.5rem);
+    padding: 0.5rem 0.75rem;
+    > * {
+      text-align: left;
+    }
+    &:hover {
+      background-color: $col-g95;
+      cursor: pointer;
+    }
+    &:active {
+      background-color: $col-g95;
+    }
+  }
+}
+
+.focused {
+  background-color: $col-g95;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: $font-e;
+  color: $col-g1;
+  line-height: 1.2;
+}
+
+.sub-title {
+  font-size: 0.875rem;
+  line-height: 1.2;
+  color: $col-g3;
+}
+
+.frame-value {
+  @include row(auto, auto, 0.5rem);
+  justify-content: space-between;
+}
+
+.text {
+  font-size: 0.875rem;
+  line-height: 1.2;
+  color: $col-g4;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  &:hover {
+    overflow: visible;
+  }
+  &-bold {
+    font-size: 0.875rem;
+    color: $col-g2;
+    font-weight: $font-b;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &:hover {
+      overflow: visible;
+    }
+  }
+  &-emph {
+    color: $col-1;
+    background-color: $col-g95;
+    // font-weight: bolder;
+    border-radius: 0.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    height: calc(var(--new100vh) - 2rem);
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    pointer-events: none;
+    &.focused {
+      background-color: $col-w;
+    }
+  }
+  .frame-field {
+    &.dropdown {
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      border: 2px solid $col-1;
+      box-shadow: none;
+    }
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid $col-w;
+    box-shadow: $shd-1;
+  }
+
+  .frame {
+    &-search {
+      @include row(none, none, 0.5rem);
+      width: 100%;
+      height: 1rem;
+      justify-content: space-between;
+      border: none;
+    }
+    &-button {
+      &.full {
+        width: 100%;
+        padding: 1rem 0rem;
+      }
+    }
+    &-drop-down {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 1;
+      top: 4rem;
+      width: 100vw;
+      background-color: $col-bgd-w;
+      max-height: 100vh;
+      height: calc(calc(var(--vh, 1vh) * 100) - 5rem);
+      border-bottom-left-radius: 0rem;
+      border-bottom-right-radius: 0rem;
+      border: 0px solid $col-g8;
+      box-shadow: 0 0 0rem $col-g8;
+      overflow: hidden;
+    }
+    &-list {
+      @include column(100%, none, 0.3rem);
+      width: calc(100% - 3rem);
+      padding: 1rem 1.5rem;
+      > * {
+        text-align: left;
+      }
+      &:hover {
+        background-color: $col-w;
+        cursor: pointer;
+      }
+      &:active {
+        background-color: $col-w;
+      }
+    }
+    &-bottom {
+      color: $col-1;
+      width: 100%;
+      min-height: 50vh;
+    }
+  }
+  .focused {
+    background-color: $col-w;
+  }
+  .drop-down {
+    width: 100%;
+    max-height: calc(calc(var(--vh, 1vh) * 100) - 5rem);
+  }
+}

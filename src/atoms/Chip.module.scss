@@ -1,0 +1,50 @@
+@import "../util/style.scss";
+
+.wrapper {
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  white-space: nowrap;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  outline: 0px;
+  border: 0px;
+  padding: 0px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.frame {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0px 8px;
+  white-space: nowrap;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.clickable.unclicked {
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+}
+
+.clickable.clicked {
+  cursor: pointer;
+  &:hover {
+    background-color: $col-1-hover;
+  }
+}
+
+.clicked {
+  color: $col-w;
+  background-color: $col-1;
+}

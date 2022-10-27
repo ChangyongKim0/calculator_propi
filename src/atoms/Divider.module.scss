@@ -1,0 +1,61 @@
+@import "../util/style.scss";
+
+.style {
+  &-default.horizontal {
+    border-top: 1px solid;
+    width: calc(100% - 2rem);
+    height: 0px;
+    margin: 0 1rem 0.5rem 1rem;
+  }
+  &-default.vertical {
+    border-left: 1px solid;
+    width: 0px;
+    height: 100%;
+  }
+  &-bold.horizontal {
+    border-top: 2px solid;
+    width: 100%;
+    height: 0px;
+  }
+  &-bold.vertical {
+    border-left: 2px solid;
+    width: 0px;
+    height: 100%;
+  }
+  &-dashed.horizontal {
+    border-top: 1px dotted;
+    width: 100%;
+    height: 0px;
+  }
+  &-dashed.vertical {
+    border-left: 1px dotted;
+    width: 0px;
+    height: 100%;
+  }
+  &-total {
+    * {
+      @include txt-regular();
+      @include txt-14();
+      color: $col-txt-w;
+    }
+  }
+  &-detail {
+    * {
+      @include txt-light();
+      @include txt-11();
+      color: $col-txt-g5;
+    }
+  }
+}
+
+.color {
+  &-primary {
+    border-color: $col-1 !important;
+  }
+  &-grey {
+    border-color: $col-light !important;
+  }
+  &-faint {
+    border-color: $col-g95 !important;
+  }
+}

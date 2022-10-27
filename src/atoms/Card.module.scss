@@ -1,0 +1,35 @@
+@import "../util/style.scss";
+
+.wrapper {
+  position: relative;
+  @include column(auto, auto, 0rem);
+  align-items: flex-start;
+  overflow: visible;
+  transition: all 0.3s;
+  width: fit-content;
+  height: auto;
+  pointer-events: all;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05);
+  background-color: $col-w;
+}
+
+.clickable {
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.2);
+  }
+}
+
+.full {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.touchable {
+  &.clickable {
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "../util/style.scss";
+
+.wrapper {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 12px;
+}
+
+.title {
+  padding: 4px 0 4px 0;
+  color: $col-grey;
+  white-space: nowrap;
+}
+
+.value {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: $font-r;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+.unit {
+  font-family: "Noto Sans";
+  line-height: 1.25rem;
+  white-space: nowrap;
+}

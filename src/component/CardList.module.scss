@@ -1,0 +1,65 @@
+@import "../util/style.scss";
+
+.wrapper {
+  padding-top: 12px;
+  padding-bottom: 8px;
+  width: 100%;
+}
+
+.frame {
+  &-summary {
+    width: 100%;
+    height: 72px;
+    padding: 1rem 0.75rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    &.clickable {
+      &::-webkit-scrollbar {
+        height: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $col-verylight;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      &:hover {
+        &::-webkit-scrollbar-thumb {
+          background: $col-light;
+        }
+      }
+    }
+    &.touchable {
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  &-bottom {
+    height: 180px;
+  }
+  &-right {
+    min-width: 0.5px;
+    min-height: 0.5px;
+  }
+}
+
+.title {
+  padding: 16px 12px 0px 12px;
+  color: $col-grey;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  font-family: "Noto Sans";
+  font-weight: $font-b;
+  width: calc(100% - 1.5rem);
+}
+
+.value {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: $font-r;
+  font-size: 1.5rem;
+}
+
+.unit {
+  line-height: 1.25rem;
+}

@@ -1,0 +1,31 @@
+@import "../util/style.scss";
+
+.wrapper {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  background-color: $col-w;
+  box-shadow: $shd-1;
+  z-index: 1;
+}
+
+.frame {
+  &-text {
+    position: absolute;
+    left: -0.25rem;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+    color: $col-g3;
+    font-size: 0.875rem;
+    font-weight: $font-e;
+    text-shadow: $shd-border-w;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}

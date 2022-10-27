@@ -1,0 +1,98 @@
+@import "../util/style.scss";
+
+.frame {
+  &-data {
+    width: calc(100% - 2rem);
+    background-color: $col-w;
+    padding: 0.25rem 1rem;
+  }
+  &-search {
+    padding: 0.75rem 1rem;
+  }
+  &-service {
+    padding: 0.75rem 1rem;
+  }
+  &-fixed {
+    padding: 0.25rem 1rem;
+  }
+  &-content {
+    position: relative;
+    // &.loading,
+    // &.success {
+    //   scroll-behavior: unset;
+    //   overflow: hidden;
+    //   // height: 100%;
+    // }
+  }
+  &-dropdown {
+    width: 100%;
+    position: absolute;
+    top: calc(2rem + 1px);
+    z-index: 500;
+    background-color: $col-w;
+    border-bottom: $col-g8 solid 1px;
+  }
+  &-navigation {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-weight: $font-b;
+    color: $col-g4;
+    padding: 0.5rem 0rem;
+    &:hover {
+      background-color: $col-g95;
+    }
+    &.emph {
+      background-color: $col-g3;
+      color: $col-w;
+    }
+    &-dropdown {
+      width: 100%;
+      text-align: center;
+      font-weight: $font-e;
+      font-size: 0.9375rem;
+      color: $col-g2;
+      padding: 0.5rem 0rem;
+      &:hover {
+        background-color: $col-g95;
+      }
+      &.emph {
+        background-color: $col-g3;
+        color: $col-w;
+      }
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+}
+.text {
+  text-align: left;
+  word-break: keep-all;
+  font-weight: $font-b;
+  line-height: 2rem;
+  color: $col-g4;
+  &-section {
+    font-size: 1.25rem;
+    font-weight: bold;
+    &-illust {
+      color: $col-g4;
+    }
+  }
+  &-title {
+    background-color: $col-g95;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: $font-b;
+    color: $col-g5;
+  }
+  &-emph {
+    color: $col-k;
+    font-weight: $font-e;
+  }
+  &-overlay {
+    color: $col-g5;
+    font-weight: bold;
+  }
+}

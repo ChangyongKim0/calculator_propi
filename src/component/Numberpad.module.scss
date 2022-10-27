@@ -1,0 +1,63 @@
+@import "../util/style.scss";
+
+.wrapper {
+  padding: 0 8px 8px 8px;
+  height: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.frame {
+  &-popup {
+    position: absolute;
+    width: 100%;
+    // display: flex;
+    // justify-content: center;
+    bottom: -50px;
+    opacity: 1;
+    transition: all 0.4s;
+    background-color: $col-w;
+    border-radius: 1rem 1rem 0 0;
+    transition-timing-function: cubic-bezier(0.19, 0.69, 0.64, 1.17);
+    box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.05);
+  }
+  &-handler {
+    padding-top: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+  &-button-row {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &-bottom {
+    height: 124px;
+  }
+
+  &-button-wrapper {
+    position: absolute;
+    top: -52px;
+    right: 12px;
+    transition: all 0.3s;
+  }
+
+  &-button {
+    color: $col-grey;
+    cursor: pointer;
+    background-color: $col-w;
+    padding: 0.75rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.text-button {
+  line-height: 14px;
+}

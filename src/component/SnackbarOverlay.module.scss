@@ -1,0 +1,22 @@
+@import "../util/style.scss";
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: var(--new100vh);
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow-y: visible;
+}
+
+.frame-popup {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  bottom: -64px;
+  opacity: 1;
+  transition: all 0.5s;
+}

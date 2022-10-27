@@ -1,0 +1,132 @@
+@import "../util/style.scss";
+
+.wrapper {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.frame {
+  &-header {
+    background-color: $col-w;
+    border-bottom: 1px solid $col-light;
+    width: 100%;
+    // height: 164px;
+    overflow: hidden;
+    pointer-events: all;
+  }
+  &-logo {
+    position: absolute;
+    width: calc(100% - 2rem);
+  }
+  &-title {
+    padding: 1rem 1rem 0 1rem;
+  }
+  &-result {
+    width: 100%;
+  }
+  &-nav {
+    padding-left: 0.5rem;
+    width: calc(100% - 0.5rem);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    &.clickable {
+      height: 42px;
+      &::-webkit-scrollbar {
+        height: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $col-w;
+        border-radius: 10px;
+      }
+      &:hover {
+        &::-webkit-scrollbar-thumb {
+          background: $col-verylight;
+        }
+      }
+    }
+    &.touchable {
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  &-button-spacer {
+    pointer-events: none;
+    margin: calc(0.75rem - 1px);
+  }
+  &-button-wrapper {
+    transition: all 0.3s;
+  }
+  &-button {
+    color: $col-grey;
+    cursor: pointer;
+    background-color: $col-w;
+    padding: 0.75rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-items: center;
+    gap: 0.5rem;
+    width: max-content;
+    border: 1px solid $col-light;
+
+    pointer-events: all;
+  }
+  &-right {
+    min-width: 0.5rem;
+    min-height: 0.5px;
+  }
+}
+
+.text {
+  &-logo {
+    font-weight: $font-b;
+    color: $col-semilight;
+    white-space: nowrap;
+  }
+  &-title {
+    font-weight: $font-r;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &-name {
+    font-weight: $font-r;
+    color: $col-grey;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &-value {
+    font-weight: $font-r;
+    font-family: "Noto Sans";
+    font-size: 2.5rem;
+    line-height: 2rem;
+    color: $col-1;
+  }
+  &-unit {
+    font-weight: $font-r;
+    color: $col-1;
+    white-space: nowrap;
+  }
+  &-illust {
+    width: 100%;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    text-align: right;
+    font-family: "Noto Sans";
+    color: $col-lightgrey;
+    word-break: keep-all;
+  }
+  @include txt-head;
+  font-size: 32px;
+  margin-top: 60px;
+  color: $col-bgd-g5;
+}
