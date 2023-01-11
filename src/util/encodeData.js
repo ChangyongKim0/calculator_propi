@@ -1,3 +1,5 @@
+import { getDefaultCardData } from "./getDefaultData";
+
 const number_char =
   "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_";
 
