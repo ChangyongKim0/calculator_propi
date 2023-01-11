@@ -28,7 +28,7 @@ const NotFound = () => {
       <Link to="/">
         <div className={cx("frame-logo")}>
           <img className={cx("logo")} src="/logo512.png" alt="Propi"></img>
-          <div className={cx("logo-title")}>Propi</div>
+          <div className={cx("logo-title")}>Calculator × Propi</div>
         </div>
       </Link>
       <div></div>
