@@ -11,6 +11,9 @@
 # production
 /build
 
+# app
+/dist
+
 # data
 /data
 
