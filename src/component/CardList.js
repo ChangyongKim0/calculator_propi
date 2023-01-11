@@ -165,7 +165,7 @@ const CardList = ({ data }) => {
                         color: "verylight",
                         onClick: () => {
                           navigator.clipboard
-                            .writeText(`http://toss.me/teampropi\t\t="f"\t=G3`)
+                            .writeText(`http://toss.me/teampropi`)
                             .then(() => {
                               setGlobalVar({
                                 snackbar: {
